@@ -2,6 +2,7 @@ package com.justpractice.demo.service;
 
 import com.justpractice.demo.dto.EmployeeDto;
 import com.justpractice.demo.entity.Employee;
+import com.justpractice.demo.exception.EmployeeNotFoundException;
 import com.justpractice.demo.mapper.EmployeeMapper;
 import com.justpractice.demo.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
@@ -22,7 +23,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDto getEmployeeById(Long employeeId) {
-        return null;
+        Employee employee = employeeRepository.findById(employeeId)
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee by id: " + employeeId + "does not exist."));
+        return EmployeeMapper.mapToEmployeeDto(employee);
     }
 
 
