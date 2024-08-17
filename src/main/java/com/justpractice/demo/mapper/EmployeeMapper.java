@@ -5,6 +5,8 @@ import com.justpractice.demo.entity.Employee;
 
 public class EmployeeMapper {
 
+    //In future, just use MapStruct or ModelMapper
+
     public static EmployeeDto mapToEmployeeDto(Employee employee) {
         return new EmployeeDto(
                 employee.getId(),
