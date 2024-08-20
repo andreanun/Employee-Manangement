@@ -49,12 +49,23 @@ public class EmployeeServiceImpl implements EmployeeService {
        Employee employee =  employeeRepository.findById(employeeId).orElseThrow(
                 () -> new EmployeeNotFoundException("Employee by id: " + employeeId + "does not exist.")
         );
+
         employee.setFirstName(updatedEmployee.getFirstName());
         employee.setLastName(updatedEmployee.getLastName());
         employee.setEmail(updatedEmployee.getEmail());
 
         Employee updatedEmployeeObj = employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(updatedEmployeeObj);
+    }
+
+    @Override
+    public void deleteEmployee(long employeeId) {
+
+        Employee employee =  employeeRepository.findById(employeeId).orElseThrow(
+                () -> new EmployeeNotFoundException("Employee by id: " + employeeId + "does not exist.")
+        );
+
+        employeeRepository.deleteById(employeeId);
     }
 
 }
