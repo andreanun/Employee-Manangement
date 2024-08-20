@@ -1,6 +1,6 @@
 A simple CRUD RESTful API for a Employee Management System
 
-**Stack:** Spring Web, PostgreSQL, and Postman for testing endpoints
+**Stack:** Spring Web, Spring Data JPA, PostgreSQL, and Postman for testing endpoints
 
 MVP Features:
 * Add a new Employee
