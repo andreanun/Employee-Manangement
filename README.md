@@ -10,14 +10,14 @@ MVP Features:
 
 **Future Plans:**
 
-*Add more Employee api endpoints
+* Add more Employee api endpoints
 
-*Add other entities such as Department, Manager, Staff and Admin. Leverage relational database mapping
+* Add other entities such as Department, Manager, Staff and Admin. Leverage relational database mapping
 
-*Unit testing
+* Unit testing
 
-*Incorporate Spring Security, adding roles, privileges, and authorization
+* Incorporate Spring Security, adding roles, privileges, and authorization
 
-*Dockerize 
+* Dockerize 
 
 
